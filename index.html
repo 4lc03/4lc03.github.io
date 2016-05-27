@@ -42,7 +42,23 @@ background-color:#4CAF50;
 
 
 
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
+<style>
+.pic{
+	width:50px;
+	height:50px;
+}
+.picbig{
+	position: absolute;
+	width:0px;
+	-webkit-transition:width 0.3s linear 0s;
+	transition:width 0.3s linear 0s;
+	z-index:10;
+}
+.pic:hover + .picbig{
+	width:200px;
+}
+</style>
 
 
 </head>
@@ -149,6 +165,18 @@ KTM
 </div> 
 
 
+
+
+
+
+<img class="pic" src="http://www.motodiguida.it/wp-content/uploads/2014/08/89209_125_EXC_6Days_90Grad.tif_3986.jpg" alt="125.1">
+<img class="picbig" src="adam_khoury.jpg" alt="Adam">
+
+<img class="pic" src="heart.png" alt="heart">
+<img class="picbig" src="heart.png" alt="heart">
+
+<img class="pic" src="hardhat.jpg" alt="hardhat">
+<img class="picbig" src="hardhat.jpg" alt="hardhat">
 
 </body>
 </html>
