@@ -51,9 +51,10 @@
 </head>
 <body>
 	
-<span style="font-family:  Helvetica; font-size: 16px; color: #FF0000;">
-Testo formattato coi CSS
-</span>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World",10,50);
 
 <h1>ENDURO</h1>
 <p></p>	
