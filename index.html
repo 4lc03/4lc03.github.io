@@ -52,6 +52,100 @@ a:hover:not(.active) {
 .active {
 background-color:#4CAF50;
 }
+
+
+
+
+
+
+
+
+
+body {
+    font-family:arial;
+    font-size:11px;
+    }
+ 
+#nav {
+    margin:0;
+    padding:0;
+    list-style:none;
+}   
+ 
+#nav li {
+    float:left;
+    display:block;
+    width:100px;
+    background:#E0E0E0;
+    position:relative;
+    z-index:500;
+    margin:0 1px;
+    -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+}
+#nav li.first {
+        -moz-border-radius:5px 0 0 5px;
+        -webkit-border-radius:5px 0 0 5px;
+    border-radius:5px 0 0 5px;
+    }
+#nav li.last {
+        -webkit-border-radius:0 5px 5px 0;
+    -moz-border-radius:0 5px 5px 0;
+        border-radius:0 5px 5px 0;
+    }
+#nav li li.last {
+        -webkit-border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+        border-radius:0 0 5px 5px;
+    }
+#nav li a {
+    display:block;
+    padding:8px 5px 0 5px;
+    font-weight:700;
+    height:23px;
+    text-decoration:none;
+    text-align:center;
+    color:#333;
+}
+#nav li a:hover {
+    color:#C00;
+}
+#nav li li:hover {
+    -webkit-transform: translate(+10px,0);
+    }
+#nav a.selected {
+    color:#C00;
+}
+#nav ul {
+    position:absolute;
+    left:0;
+    display:none;
+    margin:0 0 0 -1px;
+    padding:0;
+    list-style:none;
+}
+#nav ul li {
+    width:100px;
+    float:left;
+    border-top:1px solid #fff;
+}
+#nav ul a {
+    display:block;
+    height:auto;
+    padding: 8px 5px;
+    color:#666;
+}
+/* fix ie6, meglio inserirlo in un file .css separato */
+*html #nav ul {
+    margin:0 0 0 -2px;
+}
+
+
+
+
 </style>
 
 
@@ -203,10 +297,26 @@ ctx.strokeText("ENDURO FOR LIFE",10,50);
 
 
 
-<ul>
-  <li><a href="#Ktm">Ktm</a> </li>
-  <li><a href="#Husqvarna">Husqvarna</a></li>
-  <li><a href="#Yamaha">Yamaha</a></li>
+<ul id="nav">
+    <li class="first"><a href="#">Voce 01</a></li>
+    <li><a href="#" class="selected">Voce 02</a>
+        <ul>
+            <li><a href="#">Sottovoce Menu Numero 01</a></li>
+            <li><a href="#">Sottovoce Menu Numero 02</a></li>
+            <li class="last"><a href="#">Sottovoce Menu Numero 03</a></li>
+        </ul>
+        <div class="clear"></div>
+    </li>
+    <li><a href="#">Voce 03</a>
+    <ul>
+        <li><a href="#">Sottovoce Menu Numero 04</a></li>
+        <li><a href="#">Sottovoce Menu Numero 05</a></li>
+        <li><a href="#">Sottovoce Menu Numero 06</a></li>
+        <li class="last"><a href="#">Sottovoce Menu Numero 07</a></li>
+    </ul>         
+        <div class="clear"></div>
+    </li>
+    <li class="last"><a href="#">Voce 04</a></li>
 </ul>
 
 
